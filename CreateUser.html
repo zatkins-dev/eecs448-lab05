@@ -1,23 +1,10 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript">
-        var user = document.getElementById('user');
-        user.addEventListener("focusout", () => {
-            if (user.value == "") document.getElementById('userError').hidden = false;
-            else document.getElementById('userError').hidden = true;
-        });
-        var pass = document.getElementById('pass');
-        pass.addEventListener("focusout", () => {
-            if (pass.value == "") document.getElementById('passError').hidden = false;
-            else document.getElementById('passError').hidden = true;
-        });
-        var passMatch = document.getElementById('pass');
-        passMatch.addEventListener("focusout", () => {
-            if (passMatch.value == "") document.getElementById('passMatchError').hidden = false;
-            else passMatch.hidden = true;
-        });
-    </script>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <title>
+        Create User
+    </title>
 </head>
 <body>
     <header>
@@ -42,6 +29,23 @@
                     <label>Confirm Password: </label>
                     <input type="password" id="passConfirm" name="pass" placeholder="password">
                     <span id="passConfirmError" class="error" hidden>Passwords must match</span>
+                    <script>
+                        var user = document.getElementById('user');
+                        user.addEventListener("focusout", () => {
+                            if (user.value == "") document.getElementById('userError').hidden = false;
+                            else document.getElementById('userError').hidden = true;
+                        });
+                        var pass = document.getElementById('pass');
+                        pass.addEventListener("focusout", () => {
+                            if (pass.value == "") document.getElementById('passError').hidden = false;
+                            else document.getElementById('passError').hidden = true;
+                        });
+                        var passMatch = document.getElementById('pass');
+                        passMatch.addEventListener("focusout", () => {
+                            if (passMatch.value == "") document.getElementById('passMatchError').hidden = false;
+                            else passMatch.hidden = true;
+                        });
+                    </script>
                 </fieldset>
                 <input class="button" type="submit" value="Submit">
             </form>
