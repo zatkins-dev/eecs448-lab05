@@ -21,13 +21,13 @@
                 <fieldset id="createuser">
                     <legend>Login Credentials</legend>
                     <label>Username: </label>
-                    <input type="text" id="user" name="user" placeholder="user">*
+                    <input type="text" id="user" name="user" placeholder="user"><span class=error>*</span>
                     <span id="userError" class="error" hidden>Username is required</span><br>
                     <label>Password: </label>
-                    <input type="password" id="pass" name="pass" placeholder="password">*
+                    <input type="password" id="pass" name="pass" placeholder="password"><span class=error>*</span>
                     <span id="passError" class="error" hidden>Password is required</span><br>
                     <label>Confirm Password: </label>
-                    <input type="password" id="passConfirm" name="pass" placeholder="password">
+                    <input type="password" id="passConfirm" name="pass" placeholder="password"><span class=error>*</span>
                     <span id="passConfirmError" class="error" hidden>Passwords must match</span>
                     <script>
                         var user = document.getElementById('user');
