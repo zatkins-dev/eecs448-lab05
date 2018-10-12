@@ -3,6 +3,9 @@ button, .button {
     border: 1pt groove #663333;
     font-size: 20px;
 }
+.error {
+    color: red;
+}
 form label {
     display: inline-block;
     text-align: right;
