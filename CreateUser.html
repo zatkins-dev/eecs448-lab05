@@ -43,7 +43,7 @@
                         var passMatch = document.getElementById('pass');
                         passMatch.addEventListener("focusout", () => {
                             if (passMatch.value == "") document.getElementById('passMatchError').hidden = false;
-                            else passMatch.hidden = true;
+                            else document.getElementById('passMatchError').hidden = true;
                         });
                     </script>
                 </fieldset>
