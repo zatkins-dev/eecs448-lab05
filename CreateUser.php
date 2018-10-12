@@ -1,4 +1,7 @@
 <html>
+<head>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
     <header>
         <nav>
@@ -17,7 +20,6 @@
                     <label>Password: </label> <input type="password" id="pass" name="pass" placeholder="password">
                     <label>Confirm Password: </label> <input type="password" id="pass" name="pass" placeholder="password">
                 </fieldset>
-
                 <input class="button" type="submit" value="Submit">
             </form>
         </div>

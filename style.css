@@ -1,0 +1,10 @@
+button, .button {
+    background-color: lavender;
+    border: 1pt groove #663333;
+    font-size: 20px;
+}
+form label {
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+}
