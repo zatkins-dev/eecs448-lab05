@@ -40,10 +40,10 @@
                             if (pass.value == "") document.getElementById('passError').hidden = false;
                             else document.getElementById('passError').hidden = true;
                         });
-                        var passMatch = document.getElementById('pass');
-                        passMatch.addEventListener("focusout", () => {
-                            if (passMatch.value == "") document.getElementById('passMatchError').hidden = false;
-                            else document.getElementById('passMatchError').hidden = true;
+                        var passConfirm = document.getElementById('passConfirm');
+                        passConfirm.addEventListener("focusout", () => {
+                            if (passConfirm.value == "") document.getElementById('passConfirmError').hidden = false;
+                            else document.getElementById('passConfirmError').hidden = true;
                         });
                     </script>
                 </fieldset>
