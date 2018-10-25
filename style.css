@@ -4,10 +4,58 @@ button, .button {
     font-size: 20px;
 }
 .error {
-    color: red;
+    color: darkred;
 }
 form label {
     display: inline-block;
     text-align: right;
-    width: 300px;
+}
+header {
+    padding:15px;
+    text-align:left;
+}
+header a:link {
+    text-decoration-line: none;
+    color: slategray;
+}
+header a:visited {
+    text-decoration-line: none;
+    color: darkslategray;
+}
+header a:hover {
+    text-decoration-line: underline;
+    color: darkslategray;
+}
+header a:active {
+    text-decoration-line: underline;
+    color: darkred;
+}
+* {
+    box-sizing: border-box;
+}
+.menu {
+    float:left;
+    width:20%;
+    text-align:center;
+}
+.menu a {
+    background-color:#e5e5e5;
+    padding:8px;
+    margin-top:7px;
+    display:block;
+    width:100%;
+    color:black;
+}
+.main {
+    float:left;
+    width:60%;
+    padding:0 20px;
+}
+.right {
+    background-color:#e5e5e5;
+    float:left;
+    width:20%;
+    padding:15px;
+    margin-top:7px;
+    text-align:center;
 }
