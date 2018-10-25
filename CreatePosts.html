@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <title>
+        Create Posts
+    </title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../../index.html">Home</a>
+            &#x2712;
+            <a href="index.html">Lab 05</a>
+        </nav>
+    </header>
+    <main>
+        <div class="content titlebox"><h1>Create An Account</h1></div>
+        <div class="content">
+            <form id="form" method="POST" action="CreatePosts.php">
+                <fieldset id="user">
+                    <legend>Login Credentials</legend>
+                    <label>Username: </label>
+                    <input type="text" id="user" name="user" placeholder="user"><span class=error>*</span>
+                    <span id="userError" class="error" hidden>Username is required</span><br>
+                    <script>
+                        var user = document.getElementById('user');
+                        user.addEventListener("focusout", () => {
+                            if (user.value == "") document.getElementById('userError').hidden = false;
+                            else document.getElementById('userError').hidden = true;
+                        });
+                    </script>
+                </fieldset>
+                <fieldset id="post">
+                    <legend>New Post</legend>
+                    <label for="post" style="vertical-align:top;">Post Content: </label>
+                    <textarea id="post" name="post" cols="40" rows="10" placeholder="Write your post here"></textarea><span class=error>*</span>
+                    <span id="postError" class="error" hidden>Post cannot be empty.</span><br>
+                    <script>
+                        var CreatePosts = document.getElementById('post');
+                        post.addEventListener("focusout", () => {
+                            if (post.value == "") document.getElementById('postError').hidden = false;
+                            else document.getElementById('postError').hidden = true;
+                        });
+                    </script>
+                </fieldset>
+                <input class="button" type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
