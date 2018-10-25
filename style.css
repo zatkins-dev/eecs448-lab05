@@ -1,6 +1,21 @@
+:root {
+    --color1: rgba(255, 234, 238, 1);
+    --color2: rgba(173, 160, 166, 1);
+    --color3: rgba(125, 147, 138, 1);
+    --color4: rgba(69, 72, 81, 1);
+    --color5: rgba(40, 40, 40, 1);
+    --color6: rgba(2, 2, 10, 1);
+}
+* {
+    box-sizing: border-box;
+    color: var(--color1);
+}
+body {
+    background-color: var(--color5)
+}
 button, .button {
-    background-color: lavender;
-    border: 1pt groove #663333;
+    background-color: var(--color5);
+    border: 1pt groove var(--color1);
     font-size: 20px;
 }
 .error {
@@ -10,49 +25,66 @@ form label {
     display: inline-block;
     text-align: right;
 }
-header {
+input {
+    background-color: var(--color4);
+}
+textarea {
+    background-color: var(--color4);
+}
+header div {
     padding:15px;
     text-align:left;
 }
-header a:link {
+nav {
+    background-color: inherit;
+}
+a:link {
     text-decoration-line: none;
-    color: slategray;
+    color: var(--color1);
 }
-header a:visited {
+a:visited {
     text-decoration-line: none;
-    color: darkslategray;
+    color: var(--color2);
 }
-header a:hover {
+a:hover {
     text-decoration-line: underline;
-    color: darkslategray;
+    color: var(--color2);
 }
-header a:active {
+a:active {
     text-decoration-line: underline;
-    color: darkred;
-}
-* {
-    box-sizing: border-box;
+    color: var(--color3);
 }
 .menu {
     float:left;
     width:20%;
     text-align:center;
+    border: 4pt solid var(--color2);
+
 }
 .menu a {
-    background-color:#e5e5e5;
+    background-color: var(--color4);
     padding:8px;
     margin-top:7px;
     display:block;
     width:100%;
-    color:black;
+    color:var(--color1);
+}
+.menu a:first-child {
+    background-color: var(--color4);
+    margin-top:0px;
+    padding:8px;
+    display:block;
+    width:100%;
+    color:var(--color1);
 }
 .main {
+    background-color: var(--color4);
     float:left;
-    width:60%;
-    padding:0 20px;
+    width: 80%;
+    padding: 20px;
 }
 .right {
-    background-color:#e5e5e5;
+    background-color: var(--color4);
     float:left;
     width:20%;
     padding:15px;
