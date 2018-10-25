@@ -12,6 +12,8 @@
     <a href="../../index.html">Home</a>
     &#x2712;
     <a href="index.html">Lab 05</a>
+    &#x2712;
+    <a href="CreateUser.html">Create New User</a>
   </nav>
 </header>
 <?php
@@ -39,7 +41,6 @@ if ($result->num_rows > 0) {
 } else {
   echo "0 results" . "<br/>";
 }
-echo "Made it to end" . "<br/>";
 $mysqli->close();
 
 ?>
