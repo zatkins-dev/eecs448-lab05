@@ -1,13 +1,17 @@
 <?php
-$mysqli = new mysqli("mysql.eecs.ku.edu", "z455a818", jah4uY3u, "z455a818");
+$mysqli = mysqli_connect("mysql.eecs.ku.edu", "z455a818", jah4uY3u, "z455a818");
 
-if ($mysqli->connect_errno) {
-  printf("Connection error %s\n", $mysqli->connect_errno);
-  exit();
+if ($mysqli->connect_error) {
+  die("Connection error " . $mysqli->connect_error);
 }
+
 $username = $_POST["user"];
-if (!stype_alnum($username))
-$query = "INSERT INTO Users ({$_POST["user"]});";
-$mysqli->query($query);
-stype
+$checkQuery = "SELECT user_id FROM Users WHERE user_id IS $username";
+$result = $mysqli->query($query);
+if (!$result) {
+  $query = "INSERT INTO Users ({$_POST["user"]});";
+  $mysqli->mysqli_query($query);
+}
+
+
 ?>
