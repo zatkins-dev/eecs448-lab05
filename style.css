@@ -62,7 +62,9 @@ a:active {
     width:20%;
     text-align:center;
     border: 4pt solid var(--color2);
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 /*.menu a {
     background-color: var(--color4);
