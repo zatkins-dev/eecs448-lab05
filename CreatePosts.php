@@ -18,17 +18,16 @@
     <a href="CreatePosts.html">Create New Post</a>
   </nav>
 </header>
-<main class="main">
+<main>
+<div style="overflow: auto;">
+<div class="main">
 <?php
 include_once("ViewPost.php");
 include_once("mysqliConnection.php");
 $mysqli = sqlInit();
 $username = $_POST["user"];
-$usernameQuery = "SELECT user_id FROM Users WHERE (user_id='$username');";
-if ($mysqli->query($usernameQuery) === TRUE) {
-  echo "$username in table" . "<br/>";
-}
-else {
+$usernameQuery = "SELECT * FROM Users WHERE (user_id='$username');";
+if ($mysqli->query($usernameQuery) === FALSE) {
   die("Username '$username' not found: " . $mysqli->error);
 }
 $postsQuery = "SELECT * FROM Posts;";
@@ -44,11 +43,13 @@ if (!$result) {
     die("Post Submission Error: Post not submitted <br>" . $mysqli->error);
 }
 else {
-    echo "Successfully added new post." . "<br/>";
+    echo "Successfully added new post." . "<br>";
     echo displayPost($postId);
 }
 $mysqli->close();
 ?>
+</div>
+</div>
 </main>
-<body>
-<html>
+</body>
+</html>
