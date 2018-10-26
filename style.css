@@ -13,7 +13,7 @@
 body {
     background-color: var(--color5)
 }
-button, .button {
+.button {
     background-color: var(--color5);
     border: 1pt groove var(--color1);
     font-size: 20px;
@@ -64,7 +64,7 @@ a:active {
     border: 4pt solid var(--color2);
 
 }
-.menu a {
+/*.menu a {
     background-color: var(--color4);
     padding:8px;
     margin-top:7px;
@@ -79,6 +79,25 @@ a:active {
     display:block;
     width:100%;
     color:var(--color1);
+}*/
+.menu button.select-button {
+    background-color: var(--color4);
+    margin-top:7px;
+    padding:8px;
+    display:block;
+    width:100%;
+    color:var(--color1);
+    border: 0;
+    font-size: 14px;
+}
+.menu button.select-button:first-of-type {
+    background-color: var(--color4);
+    margin-top:0px;
+    padding:8px;
+    display:block;
+    width:100%;
+    color:var(--color1);
+    border: 0;
 }
 .main {
     background-color: var(--color4);
