@@ -33,7 +33,10 @@ textarea {
 }
 header div {
     padding:15px;
+    position: relative;
     text-align:left;
+    background-color: var(--color6);
+    box-shadow: 1px 2px 4px var(--color2);
 }
 nav {
     background-color: inherit;
@@ -175,7 +178,4 @@ iframe {
     display:block;
     width:100%;
     border-bottom: 4px solid var(--color2);
-}
-.titlebox {
-    text-decoration: underline solid var(--color1);
 }
