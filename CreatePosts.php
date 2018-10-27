@@ -27,7 +27,8 @@ include_once("mysqliConnection.php");
 $mysqli = sqlInit();
 $username = $_POST["user"];
 $usernameQuery = "SELECT * FROM Users WHERE (user_id='$username');";
-if ($mysqli->query($usernameQuery) === FALSE) {
+$result = $mysqli->query($usernameQuery);
+if ($result->num_rows === 0) {
   die("Username '$username' not found: " . $mysqli->error);
 }
 $postsQuery = "SELECT * FROM Posts;";
