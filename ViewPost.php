@@ -1,12 +1,10 @@
 <?php
-    include("mysqliConnection.php");
-    function displayPost($postId) {
-        $mysqli = sqlInit();
+    function displayPost($mysqli, $postId) {
         $query = "SELECT * FROM Posts WHERE (post_id=$postId)";
         if (!($result = $mysqli->query($query))) {
             $display = "<div class='post-frame'>\n"
                      . "\t<div class='post-error'>\n"
-                     . "\t\t<p class='post-error-text'>Database Error: Post $postId not found.</p>"
+                     . "\t\t<p class='post-error-text'>Database Error: Post $postId not found.</p>\n"
                      . "\t</div>\n"
                      . "</div>\n";
             return $display;
@@ -27,7 +25,6 @@
                                 <p>
                                     {$post['content']}
                                 </p>
-                            </div>
                             </div>
                         </div>";
             return $display;
