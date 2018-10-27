@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE php>
 <html>
     <head>
         <link rel="stylesheet" href="style.css"/>
@@ -11,37 +11,57 @@
     <body>
         <div class="main">
             <div>
-                <select>
-                    <?php
-                        include("mysqliConnection.php");
-                        $mysqli = sqlInit();
-                        $query = "SELECT * FROM Users";
-                        $result = $mysqli->query($query);
-                        if ($result->num_rows>0) {
-                            while($row = $result->fetch_assoc()) {
-                                echo "<option value='{$row["user_id"]}'>";
+                <form method="POST" action="#">
+                    <div>
+                    <div class="select-container">
+                    <select name="user" id="user" class="custom-select">
+                        <option value="">Select a user...&MediumSpace;&MediumSpace;</option>
+                        <?php
+                            include("mysqliConnection.php");
+                            $mysqli = sqlInit();
+                            $query = "SELECT * FROM Users";
+                            $result = $mysqli->query($query);
+                            if ($result->num_rows>0) {
+                                while($row = $result->fetch_assoc()) {
+                                    if (isset($_POST['submit'])) {
+                                        if ($_POST['user'] == $row['user_id']) {
+                                            echo "<option selected value='{$row["user_id"]}'>{$row["user_id"]}</option>";
+                                            continue;
+                                        }
+                                    }
+                                    echo "<option value='{$row["user_id"]}'>{$row["user_id"]}</option>";
+                                }
                             }
-                        } 
-                        $mysqli->close();
-                    ?>
-                </select>
+                        ?>
+                    </select>
+                    </div>
+                    </div>
+                    <input class="button" type="submit" name="submit" value="View Posts from User">
+                </form>
             </div>
             <div style="overflow: auto;">
                 <?php
-                include("mysqliConnection.php");
-                $mysqli = sqlInit();
-                $query = "SELECT * FROM Posts WHERE author_id='$username'";
+                $username = "";
+                if (!isset($_POST)) {
+                    die("not post");
+                }
+                if ($_POST['user'] != "") {
+                    $username = $_POST['user'];
+                }
+                else {
+                    die("user not selected");
+                }
+                include_once("ViewPost.php");
+                $query = "SELECT post_id FROM Posts WHERE author_id='$username'";
                 $result = $mysqli->query($query);
                 if ($result->num_rows>0) {
-                    echo "<table><tr><th>ID</th></tr>";
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
-                        echo "<tr><td>".$row["user_id"]."</td></tr>";
+                        echo displayPost($mysqli, $row['post_id']);
                     }
-                    echo "</table>";
                 } 
                 else {
-                    echo "0 results" . "<br/>";
+                    echo "No posts found from $username." . "<br/>";
                 }
                 $mysqli->close();
                 ?>
