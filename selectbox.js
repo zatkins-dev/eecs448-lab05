@@ -1,10 +1,7 @@
 function select(event) {
-    let buttons = document.getElementsByClassName("selected");
-    buttons[0].className = "select-button";
+    let currentSelection = document.getElementsByClassName("selected")[0];
+    currentSelection.className = "select-button";
     event.currentTarget.className += " selected";
-    event.currentTarget.firstChild.dispatchEvent(new MouseEvent("click", {
-        "view": window,
-        "bubbles": true,
-        "cancelable": false
-    }));
+    let iframe = document.getElementById("admin-iframe");
+    iframe.src = event.currentTarget.value;
 }
