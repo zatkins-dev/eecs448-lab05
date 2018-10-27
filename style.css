@@ -16,7 +16,8 @@ body {
 .button {
     background-color: var(--color5);
     border: 1pt groove var(--color1);
-    font-size: 20px;
+    font-size: 14px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
 }
 .error {
     color: darkred;
@@ -192,7 +193,7 @@ a:active {
 iframe {
     border: 2px solid var(--color2);
     height: 100%;
-    width: 100%;
+    width: fit-content;
     left: 0;
     top: 0;
     position: absolute;
@@ -205,3 +206,50 @@ iframe {
     width:100%;
     border-bottom: 4px solid var(--color2);
 }
+.select-container {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    background: var(--color5);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    border: 1px solid;
+    border-radius: 3px;
+    border-color: var(--color5);
+}
+.select-container:before, .select-container:after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 4px dashed;
+    border-color: var(--color2) transparent;
+}
+.select-container:before {
+    border-bottom-style: solid;
+    border-top: none;
+}
+  
+.select-container:after {
+    margin-top: 7px;
+    border-top-style: solid;
+    border-bottom: none;
+}
+.custom-select {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 6px 8px 6px 10px;
+    font-size: 14px;
+    background:var(--color6) !important;
+    color: var(--color1);
+    text-shadow: 0 1px black;
+    -webkit-appearance: none;
+}
+.custom-select:focus {
+    color: var(--color1);
+    outline: 0px;
+}
+
