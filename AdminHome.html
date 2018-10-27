@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="style.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="selectbox.js"></script>
         <title>
             Administrative Home
         </title>
@@ -22,14 +23,14 @@
         <div style="overflow: auto;">
             <div class="menu">
                 <h3 class="menu-header">Select View</h3>
-                <button class="select-button">
-                        <a href="#" target="admin-iframe">None</a><br>
+                <button class="select-button selected" onclick="select(event)">
+                        <a href="" target="admin-iframe">None</a><br>
                 </button>
-                <button class="select-button">
+                <button class="select-button" onclick="select(event)">
                         <a href="ViewUsers.php" target="admin-iframe">View Users</a><br>
                 </button>
-                <button class="select-button">
-                        <a href="#" target="admin-iframe">View User Posts</a><br>
+                <button class="select-button" onclick="select(event)">
+                        <a href="" target="admin-iframe">View User Posts</a><br>
                 </button>
                 </datalist>
                 
