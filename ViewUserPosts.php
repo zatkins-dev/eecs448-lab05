@@ -9,7 +9,7 @@
         </title>
     </head>
     <body>
-        <div class="main">
+        <div class="main-iframe">
             <div>
                 <form method="POST" action="#">
                     <div>

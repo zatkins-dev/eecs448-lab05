@@ -10,7 +10,7 @@
 <body>
     <main>
         <div class="content titlebox"><h1>View Users</h1></div>
-        <div class="main">
+        <div class="main-iframe">
             <?php
             include("mysqliConnection.php");
             $mysqli = sqlInit();

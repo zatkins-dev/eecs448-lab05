@@ -110,12 +110,18 @@ a:active {
 .main {
     background-color: var(--color4);
     float:left;
-    width: 80%;
+    width: 60%;
+    padding: 20px;
+}
+.main-iframe {
+    background-color: var(--color4);
+    float:left;
+    width: 100%;
     padding: 20px;
 }
 .right {
-    background-color: var(--color4);
-    float:left;
+    background-color: var(--color5);
+    float:right;
     width:20%;
     padding:15px;
     margin-top:7px;
@@ -193,7 +199,7 @@ a:active {
 iframe {
     border: 2px solid var(--color2);
     height: 100%;
-    width: fit-content;
+    width: 100%;
     left: 0;
     top: 0;
     position: absolute;
