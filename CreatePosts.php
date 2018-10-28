@@ -33,7 +33,7 @@ if ($result->num_rows === 0) {
 }
 $postsQuery = "SELECT * FROM Posts;";
 $result = $mysqli->query($postsQuery);
-$postId = $result->num_rows;
+$postId = idate("U");
 $post = $_POST['post'];
 if ($post === "") {
     die("New post must contain content.");
