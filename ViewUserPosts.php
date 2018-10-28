@@ -36,7 +36,7 @@
                     </select>
                     </div>
                     </div>
-                    <input class="button" type="submit" name="submit" value="View Posts from User">
+                    <div style="margin-left:3px;margin-top:5px;"><input class="button" type="submit" name="submit" value="View Posts from User"></div>
                 </form>
             </div>
             <div style="overflow: auto;">

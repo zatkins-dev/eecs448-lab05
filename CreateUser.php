@@ -9,11 +9,13 @@
 </head>
 <body>
 <header>
-  <nav>
-    <a href="../../index.html">Home</a>&#x2712;
-    <a href="index.html"> Lab 05</a>&#x2712;
-    <a href="CreateUser.html">  Create New User</a>
-  </nav>
+  <div>
+    <nav>
+      <a href="../../index.html">Home</a>&#x2712;
+      <a href="index.html"> Lab 05</a>&#x2712;
+      <a href="CreateUser.html">  Create New User</a>
+    </nav>
+  </div>
 </header>
 <div class="main">
   <?php

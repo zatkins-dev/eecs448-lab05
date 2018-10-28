@@ -42,7 +42,7 @@
                         ?>
                     </table>
                     </div>
-                    <input class="button" type="submit" name="submit" value="Delete Posts">
+                    <div style="margin-left:3px;margin-top:5px;"><input class="button" type="submit" name="submit" value="Delete Posts"></div>
                 </form>
             </div>
         </div>

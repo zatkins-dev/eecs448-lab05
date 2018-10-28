@@ -10,13 +10,15 @@
 </head>
 <body>
 <header>
-  <nav>
-    <a href="../../index.html">Home</a>
-    &#x2712;
-    <a href="index.html">Lab 05</a>
-    &#x2712;
-    <a href="CreatePosts.html">Create New Post</a>
-  </nav>
+  <div>
+    <nav>
+      <a href="../../index.html">Home</a>
+      &#x2712;
+      <a href="index.html">Lab 05</a>
+      &#x2712;
+      <a href="CreatePosts.html">Create New Post</a>
+    </nav>
+  </div>
 </header>
 <main>
 <div style="overflow: auto;">

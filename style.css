@@ -27,10 +27,11 @@ form label {
     text-align: right;
 }
 input {
-    background-color: var(--color4);
+    background-color: var(--color5);
+    border-width:1px;
 }
 textarea {
-    background-color: var(--color4);
+    background-color: var(--color5);
 }
 header div {
     padding:15px;
